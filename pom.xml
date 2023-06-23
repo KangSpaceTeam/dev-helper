@@ -6,7 +6,7 @@
 
     <groupId>org.kangspace.devhelper</groupId>
     <artifactId>dev-helper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>dev-helper</name>
@@ -122,7 +122,7 @@
                 <repository>
                     <id>sonatype-nexus</id>
                     <name>Nexus Release Repository</name>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>
