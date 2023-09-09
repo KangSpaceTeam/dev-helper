@@ -1,4 +1,4 @@
-package org.kangspace.devhelper.url;
+package org.kangspace.devhelper.http;
 
 import org.kangspace.devhelper.str.StringHelper;
 

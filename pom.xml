@@ -6,7 +6,7 @@
 
     <groupId>org.kangspace.devhelper</groupId>
     <artifactId>dev-helper</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>dev-helper</name>
@@ -161,6 +161,7 @@
         <gson.version>2.9.0</gson.version>
         <jackson.version>2.12.5</jackson.version>
         <junit.version>4.13.2</junit.version>
+        <netty-buffer.version>4.1.79.Final</netty-buffer.version>
     </properties>
 
     <dependencies>
@@ -247,6 +248,12 @@
             <artifactId>jsr305</artifactId>
             <version>${jsr305.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-buffer</artifactId>
+            <version>${netty-buffer.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
