@@ -2,6 +2,6 @@
 
 [![License](http://img.shields.io/:license-mit-brightgreen.svg)](https://github.com/KangSpaceTeam/dev-helper/blob/main/LICENSE)
 
-[//]: # (![maven]&#40;https://img.shields.io/maven-central/v/org.kangspace.devhelper/dev-helper&#41;)
+![maven](https://img.shields.io/maven-central/v/org.kangspace.devhelper/dev-helper)
 
 🧰 A Simple Java Dev Toolbox. 
