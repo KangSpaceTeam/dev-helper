@@ -11,10 +11,24 @@ import java.util.Random;
 public class ThreadUtil {
 
     /**
+     * 线程Sleep
+     *
+     * @param baseMillis 基于
+     */
+    @SuppressWarnings("all")
+    public static void sleep(int baseMillis) {
+        try {
+            Thread.sleep(baseMillis);
+        } catch (InterruptedException e) {
+        }
+    }
+
+    /**
      * 线程随机Sleep
      *
      * @param baseMillis 基于
      */
+    @SuppressWarnings("all")
     public static void randomSleep(int baseMillis) {
         long sleepMillis = new Random().nextInt(baseMillis);
         try {

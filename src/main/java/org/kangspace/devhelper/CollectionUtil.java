@@ -15,12 +15,16 @@ public class CollectionUtil {
         return collection == null || collection.isEmpty();
     }
 
-    public static boolean isEmpty(Map map) {
+    public static boolean isEmpty(Map<?,?> map) {
         return map == null || map.isEmpty();
     }
 
     public static boolean isNotEmpty(Collection<?> collection) {
         return !isEmpty(collection);
+    }
+
+    public static boolean isNotEmpty(Map<?,?> map) {
+        return !isEmpty(map);
     }
 
     public static <T> T first(Collection<T> collection) {

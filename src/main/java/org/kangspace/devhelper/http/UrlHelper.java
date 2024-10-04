@@ -1,6 +1,7 @@
 package org.kangspace.devhelper.http;
 
 import org.kangspace.devhelper.str.StringHelper;
+import org.kangspace.devhelper.str.StringLiteral;
 
 import javax.annotation.Nonnull;
 import java.io.UnsupportedEncodingException;
@@ -72,5 +73,28 @@ public class UrlHelper {
             }
         }
         return MessageFormat.format(urlPattern, vars);
+    }
+
+    /**
+     * url参数替换
+     * @param url url
+     * @param name 参数名
+     * @param value 参数值
+     */
+    public static String urlReplaceParam(String url, String name, String value) {
+        // 如何url中包含name参数，则删除并替换为新的value,如果不存在name，则添加该参数到url中
+        String regex = "([?&])" + name + "=.*?(&|$)";
+        url = url.replaceAll(regex, "$1" + name + "=" + value + "$2");
+        String prefix = name + StringLiteral.EQUALS;
+        if(!url.contains(prefix)){
+            url += (url.contains(StringLiteral.QUESTION_MARK) ? StringLiteral.AND : StringLiteral.QUESTION_MARK) + prefix + value;
+        }
+        return url;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(urlReplaceParam("http://example.com/?a=1&b=2", "b", "3"));
+        System.out.println(urlReplaceParam("http://example.com/", "b", "3"));
+        System.out.println(urlReplaceParam("http://example.com/?b=2", "b", "3"));
     }
 }
