@@ -78,6 +78,8 @@
         <jackson.version>2.15.2</jackson.version>
         <junit.version>4.13.2</junit.version>
         <netty-buffer.version>4.1.79.Final</netty-buffer.version>
+        <httpclient.version>4.5.13</httpclient.version>
+        <commons-io.version>2.11.0</commons-io.version>
     </properties>
 
     <dependencies>
@@ -169,6 +171,20 @@
             <artifactId>netty-buffer</artifactId>
             <version>${netty-buffer.version}</version>
         </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
 
     </dependencies>
 
